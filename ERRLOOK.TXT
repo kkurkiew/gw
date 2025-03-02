@@ -4,7 +4,7 @@ README
 
 
 Created: 05:30 PM 11/23/2023
-Last Updated: 09:30 PM 01/12/2023
+Last Updated: 03:00 PM 03/02/2025
 
 Contents:
 =========
@@ -13,13 +13,13 @@ INTRODUCTION
 
 ERRORS
 1.> Error Message "Cannot find or create Gosu Compiler"
-2.> Error Message "A bundle at version 0 cannot be rolled
+2.> Error Message "Gosu compiler: Cannot create .class files"
+3.> Error Message "A bundle at version 0 cannot be rolled
     back to version 1. A bundle can only be rolled back to
     a version prior to the current version."
-3.> Error Message "Command line is too long"
-4.> Error Message "Order by column xxx not allowed with this
+4.> Error Message "Command line is too long"
+5.> Error Message "Order by column xxx not allowed with this
     processor. Only the ID can be present."
-5.> 
 
 --------------------------------------------------------------------------
 
@@ -46,7 +46,16 @@ MyClass.methodName()             // Call a static method
 
 --------------------------------------------------------------------------------
 
-2. Error Message "A bundle at version 0 cannot be rolled
+2. Error Message "Gosu compiler: Cannot create .class files":
+=============================================================
+
+Might indicate misuse of the ${ EXPRESSION } syntax. To fix, make sure that all
+strings are well-formatted.
+
+
+--------------------------------------------------------------------------------
+
+3. Error Message "A bundle at version 0 cannot be rolled
   back to version 1. A bundle can only be rolled back to a version prior to the
   current version.":
 ========================================================
@@ -61,7 +70,7 @@ obj = bundle.add(obj)
 
 --------------------------------------------------------------------------------
 
-3. Error Message "Command line is too long":
+4. Error Message "Command line is too long":
 ============================================
 
 Occurs after a Guidewire project is opened in IntelliJ IDEA. To fix, reinitialize
@@ -70,7 +79,7 @@ the hidden .idea folder by running `gwb cleanIdea` (resets all settings).
 
 --------------------------------------------------------------------------------
 
-4. Error Message "Order by column xxx not allowed with
+5. Error Message "Order by column xxx not allowed with
   this processor. Only the ID can be present.":
 ============================================
 
